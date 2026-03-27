@@ -38,8 +38,9 @@
       "name": "English",
       "path": "lang/en.json"
     }
-  ],"manifest": "https://raw.githubusercontent.com/davidwagers11-alt/locus-system/main/system.json",
-  "download": "https://github.com/davidwagers11-alt/locus-system/archive/refs/heads/main.zip"
+  ],
+"manifest": "https://raw.githubusercontent.com/davidwagers11-alt/locus-foundry/main/system.json",
+"download": "https://github.com/davidwagers11-alt/locus-foundry/archive/refs/heads/main.zip"
  
 
 }
