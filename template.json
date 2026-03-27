@@ -1,0 +1,136 @@
+{
+  "Actor": {
+    "types": ["cast", "foil", "monster"],
+    "templates": {
+      "base": {
+        "attributes": {
+          "frailty": { "value": 3 },
+          "clumsiness": { "value": 3 },
+          "carelessness": { "value": 3 },
+          "impatience": { "value": 3 },
+          "cowardice": { "value": 3 },
+          "ignorance": { "value": 3 },
+          "repulsion": { "value": 3 },
+          "temper": { "value": 3 }
+        },
+        "resources": {
+          "stress": {
+            "value": "uneasy"
+          },
+          "willpower": {
+            "value": 5
+          }
+        },
+        "identity": {
+          "haunt": {
+            "type": "temptation",
+            "suit": "diamonds",
+            "description": ""
+          },
+          "virtue": {
+            "type": "temperance",
+            "suit": "diamonds",
+            "description": ""
+          },
+          "attitude": {
+            "outlook": "pessimistic",
+            "degree": "ashamed",
+            "label": "Ashamed Pessimist",
+            "description": ""
+          }
+        },
+        "death": {
+          "value": 0,
+          "max": 27
+        },
+        "hand": [],
+        "handCount": 0,
+        "eligibleLayer": 0,
+        "activeLayer": 0
+      }
+    },
+
+    "cast": {
+      "templates": ["base"]
+    },
+
+    "foil": {
+      "templates": ["base"]
+    },
+
+    "monster": {
+      "templates": ["base"],
+      "source": "",
+      "behaviour": "",
+      "weakness": "",
+      "attack": {
+        "value": 0,
+        "descriptor": ""
+      },
+      "chase": {
+        "value": 0,
+        "descriptor": ""
+      },
+      "search": {
+        "value": 0,
+        "descriptor": ""
+      },
+      "resist": {
+        "value": 0,
+        "descriptor": ""
+      },
+      "deathsDoor": {
+        "capacity": 9,
+        "value": 0
+      }
+    }
+  },
+
+ "Item": {
+  "types": ["item", "infliction", "skill"],
+  "templates": {
+    "base": {
+      "size": 1,
+      "damageType": "",
+      "quality": "medium",
+      "durability": {
+        "value": 0,
+        "max": 8
+      },
+      "damaged": false,
+      "destroyed": false,
+      "description": ""
+    },
+    "inflictionBase": {
+      "descriptor": "",
+      "attribute": "",
+      "condition": "",
+      "difficulty": "medium",
+      "description": ""
+    },
+    "skillBase": {
+      "skillType": "trained",
+      "linkedAttribute": "",
+      "reminderText": "",
+      "description": "",
+      "automation": {
+        "enabled": false,
+        "mode": "none",
+        "effect": ""
+      }
+    }
+  },
+
+  "item": {
+    "templates": ["base"]
+  },
+
+  "infliction": {
+    "templates": ["inflictionBase"]
+  },
+
+  "skill": {
+    "templates": ["skillBase"]
+  }
+}
+}
