@@ -594,3 +594,4 @@ export class LocusCastSheet extends ActorSheet {
       }
     });
   }
+}
