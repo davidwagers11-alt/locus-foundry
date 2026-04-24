@@ -1,0 +1,46 @@
+{
+  "id": "locus-system",
+  "title": "Locus System",
+  "description": "A custom system for running Locus-based horror games in Foundry VTT.",
+  "version": "0.0.2",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13.351"
+  },
+  "authors": [
+    {
+      "name": "Hangman's Gate"
+    }
+  ],
+  "documentTypes": {
+  "Actor": {
+    "cast": {},
+    "foil": {},
+    "monster": {}
+  },
+  "Item": {
+    "item": {},
+    "infliction": {},
+    "skill": {}
+  }
+}
+  ,"esmodules": [
+    "module/locus.js",
+    "module/deck/deck.js"
+  ],
+  "styles": [
+    "styles/locus.css"
+  ],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "manifest": "https://raw.githubusercontent.com/davidwagers11-alt/locus-system/main/system.json",
+  "download": "https://github.com/davidwagers11-alt/locus-system/archive/refs/heads/main.zip"
+ 
+
+}
