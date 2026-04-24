@@ -255,3 +255,4 @@ Hooks.once("init", () => {
   game.locusSystem.deck = HGDeckManager;
 
   console.log("Locus System | Deck manager registered");
+});
