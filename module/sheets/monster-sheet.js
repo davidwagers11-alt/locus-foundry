@@ -174,3 +174,4 @@ export class LocusMonsterSheet extends ActorSheet {
       });
     });
   }
+}
