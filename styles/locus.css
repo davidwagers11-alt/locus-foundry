@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ===================================== */
 /* LOCUS SYSTEM - CORE SHEET/UI STYLES   */
 /* ===================================== */
@@ -1905,4 +1906,1871 @@ li.chat-message .dice-total {
 
 .locus-roll-btn:active {
   transform: translateY(1px);
+=======
+/* ===================================== */
+/* LOCUS SYSTEM - CORE SHEET/UI STYLES   */
+/* ===================================== */
+
+/* ---------- Base app/window behavior ---------- */
+
+.locus.sheet.actor .window-content,
+.locus-sheet .window-content,
+.app.sheet.actor .window-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* ---------- Roll/chat helpers ---------- */
+
+.locus-roll-card h3 {
+  margin: 0 0 8px 0;
+}
+
+.locus-roll-card p {
+  margin: 4px 0;
+}
+
+.locus-roll-actions {
+  margin-top: 10px;
+}
+
+.locus-roll-actions .locus-reroll-button {
+  width: 100%;
+}
+
+.locus-reroll-dialog .locus-reroll-option {
+  margin: 6px 0;
+}
+
+/* ===================================== */
+/* LOCUS CAST SHEET - HANGMAN UI         */
+/* ===================================== */
+
+.locus-cast-sheet {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  color: #e7dfd4;
+  background:
+    radial-gradient(circle at top, rgba(130, 20, 20, 0.14), transparent 28%),
+    linear-gradient(180deg, rgba(14, 14, 18, 0.98), rgba(8, 8, 12, 0.98));
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+.locus-cast-sheet *,
+.locus-cast-sheet *::before,
+.locus-cast-sheet *::after {
+  box-sizing: border-box;
+}
+
+.locus-cast-sheet .locus-sheet__background {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.3;
+  background:
+    linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.02) 50%, transparent 100%);
+  mix-blend-mode: screen;
+}
+
+.locus-cast-sheet > * {
+  position: relative;
+  z-index: 1;
+}
+
+.locus-cast-sheet,
+.locus-cast-sheet input,
+.locus-cast-sheet select,
+.locus-cast-sheet textarea,
+.locus-cast-sheet button,
+.locus-cast-sheet label,
+.locus-cast-sheet span,
+.locus-cast-sheet h1,
+.locus-cast-sheet h2,
+.locus-cast-sheet h3,
+.locus-cast-sheet p,
+.locus-cast-sheet a {
+  color: #e7dfd4;
+}
+
+/* ---------- Shared panels ---------- */
+
+.locus-panel,
+.locus-cast-header,
+.locus-pressure-card,
+.locus-identity-block,
+.locus-type-pill,
+.locus-hand-pill {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  border: 1px solid rgba(174, 146, 115, 0.22);
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(26, 26, 30, 0.96), rgba(16, 16, 20, 0.96));
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.02) inset,
+    0 10px 24px rgba(0,0,0,0.35);
+}
+
+.locus-panel__header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(174, 146, 115, 0.14);
+  background: linear-gradient(90deg, rgba(95, 18, 18, 0.2), rgba(255,255,255,0.02));
+}
+
+.locus-panel__header h2 {
+  margin: 0;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.locus-panel__body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 14px;
+  overflow: visible;
+}
+
+/* ---------- Header ---------- */
+
+.locus-cast-header {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 14px;
+  padding: 14px;
+  align-items: stretch;
+}
+
+.locus-cast-header__portrait-wrap,
+.locus-cast-header__identity,
+.locus-cast-header__pressure {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.locus-cast-header__portrait-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  min-height: 180px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(174, 146, 115, 0.12);
+}
+
+.locus-cast-header__portrait {
+  width: 100%;
+  max-width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(174, 146, 115, 0.25);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+.locus-cast-header__identity {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.locus-cast-header__title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.locus-ui-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #aa9d8f;
+}
+
+.locus-cast-header__title {
+  margin: 0;
+}
+
+.locus-cast-header__title input {
+  height: 46px;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 6px 2px;
+  border: none;
+  border-bottom: 1px solid rgba(174, 146, 115, 0.34);
+  border-radius: 0;
+  background: transparent;
+  color: #f4ede4;
+  box-shadow: none;
+}
+
+.locus-cast-header__title input:focus {
+  border-bottom-color: rgba(163, 56, 56, 0.85);
+  box-shadow: none;
+}
+
+.locus-cast-header__subtitle-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.locus-type-pill,
+.locus-hand-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: auto;
+  min-height: 38px;
+  padding: 8px 12px;
+}
+
+.locus-type-pill {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+}
+
+.locus-hand-pill__label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #b3a698;
+}
+
+.locus-hand-pill__value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #f2e9dc;
+}
+
+.locus-cast-header__pressure {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.locus-pressure-card {
+  padding: 12px;
+}
+
+.locus-pressure-card--stress {
+  border-left: 3px solid rgba(162, 65, 65, 0.95);
+}
+
+.locus-pressure-card--willpower {
+  border-left: 3px solid rgba(110, 110, 148, 0.95);
+}
+
+.locus-pressure-card--death {
+  border-left: 3px solid rgba(185, 149, 94, 0.95);
+}
+
+.locus-mini-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #aa9d8f;
+}
+
+.locus-death-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+/* ---------- Tabs ---------- */
+
+.locus-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+  padding: 0;
+}
+
+.locus-tabs .item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(174, 146, 115, 0.18);
+  background: linear-gradient(180deg, rgba(28, 28, 34, 0.96), rgba(18, 18, 22, 0.96));
+  color: #d9cfc2;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.12s ease, background 0.2s ease;
+}
+
+.locus-tabs .item:hover {
+  transform: translateY(-1px);
+  border-color: rgba(205, 162, 117, 0.35);
+}
+
+.locus-tabs .item.active {
+  color: #f4ede4;
+  border-color: rgba(205, 162, 117, 0.42);
+  background: linear-gradient(180deg, rgba(84, 28, 28, 0.95), rgba(44, 18, 18, 0.98));
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.02) inset;
+}
+
+.locus-tab-body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: visible;
+}
+
+.locus-tab {
+  display: none;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.locus-tab.active {
+  display: block;
+}
+
+.locus-subpanel {
+  margin-top: 14px;
+}
+
+.locus-empty-state {
+  padding: 18px;
+  border: 1px dashed rgba(174, 146, 115, 0.2);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.02);
+  color: #bfb3a6;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Attributes ---------- */
+
+.locus-difficulty-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 140px;
+  max-width: 180px;
+}
+
+.locus-attributes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.locus-attribute-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 80px 100px;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.locus-attribute-row__label,
+.locus-attribute-row__value,
+.locus-attribute-row__action {
+  min-width: 0;
+}
+
+.locus-attribute-row__label label {
+  margin: 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #d9cfc2;
+}
+
+/* ---------- Identity ---------- */
+
+.locus-stacked-panels {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.locus-identity-block {
+  padding: 12px;
+}
+
+.locus-identity-block__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.locus-identity-block__header h3 {
+  margin: 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.locus-suit-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 82px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(95, 18, 18, 0.2);
+  border: 1px solid rgba(174, 146, 115, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 11px;
+}
+
+.locus-form-grid {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+}
+
+.locus-form-grid--1 {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.locus-form-grid--2 {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.locus-form-grid--3 {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.locus-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  width: 100%;
+}
+
+.locus-field--full {
+  grid-column: 1 / -1;
+}
+
+/* ---------- Cards ---------- */
+
+.locus-card-controls-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.locus-card-summary,
+.locus-card-draw {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+}
+
+.locus-gm-hand label {
+  margin-bottom: 6px;
+}
+
+.locus-hand-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.locus-card-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.03);
+}
+
+.locus-card-entry--empty {
+  justify-content: center;
+}
+
+.locus-card-main,
+.locus-card-controls {
+  min-width: 0;
+}
+
+.locus-card-main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.locus-card-label {
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.locus-card-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(123, 28, 28, 0.25);
+  border: 1px solid rgba(174, 146, 115, 0.18);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.locus-card-suit {
+  font-size: 1.2em;
+}
+
+/* ---------- Inputs / controls ---------- */
+
+.locus-cast-sheet input[type="text"],
+.locus-cast-sheet input[type="number"],
+.locus-cast-sheet select,
+.locus-cast-sheet textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  border-radius: 8px;
+  border: 1px solid rgba(174, 146, 115, 0.2);
+  background: rgba(8, 8, 10, 0.55);
+  color: #ece3d7;
+  padding: 8px 10px;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.locus-cast-sheet textarea {
+  display: block;
+  min-height: 90px;
+  resize: vertical;
+  line-height: 1.45;
+}
+
+.locus-cast-sheet input:focus,
+.locus-cast-sheet select:focus,
+.locus-cast-sheet textarea:focus {
+  outline: none;
+  border-color: rgba(163, 56, 56, 0.8);
+  background: rgba(10, 10, 12, 0.82);
+  box-shadow: 0 0 0 1px rgba(163, 56, 56, 0.12);
+}
+
+.locus-cast-sheet button {
+  width: auto;
+  max-width: 100%;
+  min-width: 0;
+  border-radius: 8px;
+  border: 1px solid rgba(174, 146, 115, 0.24);
+  background: linear-gradient(180deg, rgba(64, 20, 20, 0.9), rgba(34, 14, 14, 0.95));
+  color: #f2e9dc;
+  padding: 8px 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: transform 0.12s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.locus-cast-sheet button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(205, 162, 117, 0.42);
+  background: linear-gradient(180deg, rgba(84, 28, 28, 0.95), rgba(44, 18, 18, 0.98));
+}
+
+.locus-cast-sheet button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.locus-cast-sheet label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #aa9d8f;
+}
+
+/* Dropdown readability */
+.locus-cast-sheet select {
+  color: #f4ede4;
+  background-color: rgba(8, 8, 10, 0.92);
+}
+
+.locus-cast-sheet select option,
+.locus-cast-sheet select optgroup {
+  color: #f4ede4;
+  background: #111216;
+}
+
+/* ---------- Scrollbars ---------- */
+
+.locus-cast-sheet *::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.locus-cast-sheet *::-webkit-scrollbar-thumb {
+  background: rgba(136, 111, 91, 0.45);
+  border-radius: 999px;
+}
+
+.locus-cast-sheet *::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.03);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1100px) {
+  .locus-cast-header {
+    grid-template-columns: 160px minmax(0, 1fr);
+  }
+
+  .locus-cast-header__pressure {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .locus-cast-header,
+  .locus-form-grid--2,
+  .locus-form-grid--3,
+  .locus-death-grid,
+  .locus-attribute-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .locus-tabs .item {
+    min-width: calc(50% - 4px);
+  }
+
+  .locus-attribute-row__action button {
+    width: 100%;
+  }
+
+  .locus-card-entry {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .locus-card-controls button {
+    width: 100%;
+  }
+}
+/* ===================================== */
+/* SELECT CONTROL FIX                    */
+/* ===================================== */
+
+.locus-cast-sheet select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  height: 40px;
+  min-height: 40px;
+  line-height: 1.2;
+
+  padding: 8px 38px 8px 12px;
+  background-color: rgba(8, 8, 10, 0.92);
+  background-image: none;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-indent: 0;
+}
+
+/* custom dropdown arrow */
+.locus-pressure-card,
+.locus-field,
+.locus-difficulty-wrap {
+  position: relative;
+}
+
+.locus-pressure-card select,
+.locus-field select,
+.locus-difficulty-wrap select {
+  background-image: none;
+}
+
+.locus-pressure-card:has(select)::after,
+.locus-field:has(select)::after,
+.locus-difficulty-wrap:has(select)::after {
+  content: "▾";
+  position: absolute;
+  right: 12px;
+  top: calc(50% + 8px);
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #f4ede4;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* make sure stress card arrow sits correctly */
+.locus-pressure-card .locus-ui-label + select {
+  display: block;
+}
+
+/* hide old browser arrows in older MS rendering */
+.locus-cast-sheet select::-ms-expand {
+  display: none;
+}
+/* ===================================== */
+/* HANGMAN'S GATE - ENHANCEMENT LAYER    */
+/* (SAFE ADDITIVE STYLING)               */
+/* ===================================== */
+
+/* ---------- Typography Upgrade ---------- */
+
+.locus-cast-sheet {
+  font-family: 'IBM Plex Sans', sans-serif;
+  letter-spacing: 0.015em;
+}
+
+.locus-cast-sheet h1,
+.locus-cast-sheet h2,
+.locus-cast-sheet h3,
+.locus-ui-label,
+.locus-panel__header h2 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Subtle horror text presence */
+.locus-panel__header h2 {
+  text-shadow: 0 0 2px rgba(255,255,255,0.08);
+}
+
+/* ---------- Global Atmosphere ---------- */
+
+.locus-cast-sheet {
+  color: rgba(230, 225, 215, 0.92);
+}
+
+/* Slight vignette pressure */
+.locus-cast-sheet::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 80px rgba(0,0,0,0.45);
+  z-index: 0;
+}
+
+/* ---------- Panel Depth Enhancement ---------- */
+
+.locus-panel,
+.locus-pressure-card,
+.locus-identity-block {
+  box-shadow:
+    inset 0 0 18px rgba(0,0,0,0.45),
+    0 10px 24px rgba(0,0,0,0.4);
+}
+
+/* ---------- Header Identity Glow ---------- */
+
+.locus-cast-header__title input {
+  text-shadow: 0 0 6px rgba(255,255,255,0.08);
+}
+
+/* ---------- Cards Held (Cold Glow) ---------- */
+
+.locus-hand-pill__value {
+  color: #9ecbff;
+  text-shadow:
+    0 0 6px rgba(100,160,255,0.25),
+    0 0 12px rgba(80,120,255,0.12);
+}
+
+/* ---------- Stress (Dynamic Oppression) ---------- */
+
+.locus-pressure-card--stress select {
+  text-shadow:
+    0 0 4px rgba(255,80,80,0.25);
+}
+
+/* State-based coloring (matches your values exactly) */
+.locus-pressure-card--stress select[value="uneasy"] {
+  color: #d8cfc3;
+}
+
+.locus-pressure-card--stress select[value="tense"] {
+  color: #ffb3a3;
+  text-shadow: 0 0 6px rgba(255,120,100,0.25);
+}
+
+.locus-pressure-card--stress select[value="stressed"] {
+  color: #ff6b6b;
+  text-shadow:
+    0 0 8px rgba(255,80,80,0.35),
+    0 0 16px rgba(120,20,20,0.2);
+}
+
+/* ---------- Willpower (Controlled glow) ---------- */
+
+.locus-pressure-card--willpower input {
+  text-shadow: 0 0 4px rgba(120,120,255,0.15);
+}
+
+/* ---------- Death's Door (Heavy tone) ---------- */
+
+.locus-pressure-card--death input {
+  color: #e5c07b;
+  text-shadow:
+    0 0 6px rgba(185,149,94,0.25);
+}
+
+/* ---------- Tabs (Identity Pass) ---------- */
+
+.locus-tabs .item {
+  position: relative;
+}
+
+/* Subtle “etched” feel */
+.locus-tabs .item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 6px rgba(255,255,255,0.03);
+}
+
+/* Active tab pulse */
+.locus-tabs .item.active {
+  text-shadow: 0 0 6px rgba(255,255,255,0.15);
+}
+
+/* ---------- Attribute Rows (Hover Presence) ---------- */
+
+.locus-attribute-row:hover {
+  background: rgba(255,255,255,0.04);
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.03);
+}
+
+/* ---------- Buttons (Subtle life) ---------- */
+
+.locus-cast-sheet button:hover {
+  text-shadow: 0 0 6px rgba(255,255,255,0.18);
+}
+
+/* ---------- Card Entries (Haunt Highlight Ready) ---------- */
+
+.locus-card-entry {
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.locus-card-entry:hover {
+  background: rgba(255,255,255,0.05);
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.04);
+}
+
+/* ---------- Haunt Tag (Corruption Glow) ---------- */
+
+.locus-card-tag {
+  color: #c084fc;
+  text-shadow:
+    0 0 6px rgba(168,85,247,0.35),
+    0 0 12px rgba(124,58,237,0.2);
+}
+
+/* ---------- Suit Badge (Identity Emphasis) ---------- */
+
+.locus-suit-badge {
+  text-shadow: 0 0 4px rgba(255,255,255,0.1);
+}
+
+/* ---------- Input Focus (Cleaner, more readable) ---------- */
+
+.locus-cast-sheet input:focus,
+.locus-cast-sheet select:focus,
+.locus-cast-sheet textarea:focus {
+  box-shadow:
+    0 0 0 1px rgba(163,56,56,0.2),
+    0 0 10px rgba(163,56,56,0.08);
+}
+
+/* ---------- Scrollbar Slight Upgrade ---------- */
+
+.locus-cast-sheet *::-webkit-scrollbar-thumb {
+  background: rgba(136,111,91,0.55);
+}
+/* ===================================== */
+/* STRESS → ENVIRONMENTAL PRESSURE       */
+/* ===================================== */
+
+.locus-system.stress-uneasy .locus-cast-sheet {
+  filter: none;
+}
+
+.locus-system.stress-tense .locus-cast-sheet {
+  filter: contrast(1.03) brightness(0.97);
+}
+
+.locus-system.stress-stressed .locus-cast-sheet {
+  filter: contrast(1.06) brightness(0.94);
+}
+
+.locus-system.stress-stressed .locus-panel,
+.locus-system.stress-stressed .locus-pressure-card {
+  box-shadow:
+    inset 0 0 24px rgba(0,0,0,0.55),
+    0 12px 28px rgba(0,0,0,0.5);
+}
+
+/* ===================================== */
+/* DEATH'S DOOR → TERMINAL PRESENCE      */
+/* ===================================== */
+
+.locus-pressure-card--death {
+  transition: all 0.2s ease;
+}
+
+.locus-system[class*="death-1"] .locus-pressure-card--death {
+  border-left-color: rgba(200, 160, 100, 1);
+  box-shadow:
+    inset 0 0 12px rgba(185,149,94,0.25),
+    0 0 8px rgba(185,149,94,0.08);
+}
+
+.locus-system[class*="death-2"] .locus-pressure-card--death {
+  box-shadow:
+    inset 0 0 18px rgba(185,149,94,0.35),
+    0 0 12px rgba(185,149,94,0.12);
+}
+
+.locus-system[class*="death-3"] .locus-pressure-card--death {
+  box-shadow:
+    inset 0 0 24px rgba(185,149,94,0.45),
+    0 0 18px rgba(185,149,94,0.18);
+}
+
+/* Subtle spread into header */
+.locus-system[class*="death-2"] .locus-cast-header {
+  box-shadow: inset 0 0 20px rgba(185,149,94,0.08);
+}
+.locus-item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.locus-item-card {
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.03);
+}
+
+.locus-item-card.is-damaged {
+  border-color: rgba(185,149,94,0.6);
+  box-shadow: inset 0 0 12px rgba(185,149,94,0.3);
+}
+
+.locus-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.locus-item-controls button {
+  margin-left: 4px;
+}
+
+.locus-item-meta {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  color: #bfb3a6;
+}
+
+.locus-item-durability {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.durability-box {
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.durability-box.filled {
+  background: #c96565;
+}
+
+.locus-item-broken {
+  margin-top: 6px;
+  color: #e5c07b;
+  font-weight: bold;
+}
+.locus-item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.locus-item-card {
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.03);
+}
+
+.locus-item-card.is-damaged {
+  border-color: rgba(185,149,94,0.6);
+  box-shadow: inset 0 0 12px rgba(185,149,94,0.22);
+}
+
+.locus-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.locus-item-name-input {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.locus-item-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.locus-item-footer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.locus-item-broken {
+  color: #e5c07b;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.locus-durability-track {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.locus-durability-box {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(255,255,255,0.25);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.locus-durability-box.filled {
+  background: #c96565;
+  box-shadow: 0 0 6px rgba(200,80,80,0.4);
+}
+
+.locus-durability-box:hover {
+  border-color: #ffffff;
+}
+.locus-durability-track {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.locus-durability-box {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(255,255,255,0.25);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.locus-durability-box.filled {
+  background: #c96565;
+  box-shadow: 0 0 6px rgba(200,80,80,0.4);
+}
+
+.locus-durability-box:hover {
+  border-color: #ffffff;
+}
+.locus-durability-track {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.locus-durability-box {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  min-width: 16px;
+  min-height: 16px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.locus-durability-box.filled {
+  background: #c96565;
+  box-shadow: 0 0 6px rgba(200,80,80,0.4);
+}
+
+.locus-durability-box:hover {
+  border-color: #ffffff;
+}
+
+.locus-durability-box:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.2);
+}
+.locus-attribute-row {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(180px, 220px) 80px;
+  gap: 14px;
+  align-items: center;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.locus-attribute-row__label,
+.locus-attribute-row__value,
+.locus-attribute-row__action {
+  min-width: 0;
+}
+
+.locus-attribute-row__value {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.locus-attribute-dots {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.locus-attribute-dot {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.28);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.locus-attribute-dot.filled {
+  background: #e7dfd4;
+  box-shadow: 0 0 6px rgba(231,223,212,0.22);
+}
+
+.locus-attribute-dot:hover {
+  border-color: rgba(255,255,255,0.75);
+  transform: scale(1.05);
+}
+
+.locus-attribute-dot:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.18);
+}
+
+.locus-attribute-row__action {
+  display: flex;
+  justify-content: flex-end;
+}
+.locus-death-readout {
+  margin-bottom: 10px;
+}
+
+.locus-death-readout__value {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #e5c07b;
+  text-shadow: 0 0 6px rgba(185,149,94,0.22);
+}
+
+.locus-death-track-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.locus-death-track {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.locus-death-box {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  padding: 0;
+  border-radius: 3px;
+  border: 1px solid rgba(229,192,123,0.35);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.locus-death-box.filled {
+  background: rgba(229,192,123,0.9);
+  box-shadow: 0 0 6px rgba(185,149,94,0.28);
+}
+
+.locus-death-box:hover {
+  border-color: rgba(245,220,170,0.9);
+  transform: scale(1.03);
+}
+
+.locus-death-box:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(245,220,170,0.18);
+}
+
+.locus-death-config {
+  margin-top: 4px;
+}
+
+.locus-pressure-card--death .locus-field {
+  margin-bottom: 0;
+}
+.locus-death-controls {
+  display: flex;
+  align-items: flex-end;
+}
+
+.locus-death-reset {
+  height: 32px;
+  padding: 0 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(229,192,123,0.35);
+  background: rgba(229,192,123,0.08);
+  color: #e5c07b;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.locus-death-reset:hover {
+  background: rgba(229,192,123,0.18);
+  border-color: rgba(245,220,170,0.7);
+}
+/* ===================================== */
+/* LOCUS MONSTER SHEET                   */
+/* ===================================== */
+
+.locus-monster-sheet .locus-cast-header {
+  grid-template-columns: 180px minmax(0, 1.35fr) minmax(260px, 0.9fr);
+}
+
+.locus-monster-sheet .locus-type-pill {
+  background: linear-gradient(180deg, rgba(74, 18, 18, 0.95), rgba(34, 12, 12, 0.98));
+  border-color: rgba(205, 162, 117, 0.28);
+  color: #f4ede4;
+}
+
+.locus-monster-sheet .locus-monster-attributes-grid {
+  gap: 12px;
+}
+
+.locus-monster-sheet .locus-monster-stat-row {
+  grid-template-columns: minmax(140px, 1fr) 120px minmax(220px, 1.2fr);
+  gap: 14px;
+}
+
+.locus-monster-sheet .locus-monster-stat-value {
+  display: flex;
+  align-items: center;
+}
+
+.locus-monster-sheet .locus-monster-stat-action {
+  display: flex;
+  justify-content: stretch;
+}
+
+.locus-monster-sheet .locus-monster-stat-action input {
+  width: 100%;
+}
+
+.locus-monster-sheet .locus-panel__header {
+  background: linear-gradient(90deg, rgba(95, 18, 18, 0.24), rgba(255,255,255,0.015));
+}
+
+.locus-monster-sheet .locus-panel__header h2 {
+  color: #f1e7da;
+}
+
+.locus-monster-sheet .locus-pressure-card--death {
+  min-height: 100%;
+}
+
+.locus-monster-sheet .locus-field--full {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 1100px) {
+  .locus-monster-sheet .locus-cast-header {
+    grid-template-columns: 160px minmax(0, 1fr);
+  }
+
+  .locus-monster-sheet .locus-cast-header__pressure {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .locus-monster-sheet .locus-monster-stat-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+/* ===================================== */
+/* LOCUS ITEM SHEETS                     */
+/* ===================================== */
+
+.locus-item-sheet .locus-item-header {
+  grid-template-columns: 180px minmax(0, 1fr);
+}
+
+.locus-item-sheet .locus-type-pill {
+  background: linear-gradient(180deg, rgba(48, 48, 58, 0.95), rgba(22, 22, 28, 0.98));
+  border-color: rgba(205, 162, 117, 0.22);
+  color: #f4ede4;
+}
+
+.locus-infliction-sheet .locus-type-pill {
+  background: linear-gradient(180deg, rgba(86, 20, 20, 0.95), rgba(32, 10, 10, 0.98));
+  border-color: rgba(205, 162, 117, 0.28);
+}
+
+.locus-item-sheet .locus-split-input {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 8px;
+  align-items: center;
+}
+
+.locus-item-sheet textarea {
+  width: 100%;
+  min-height: 160px;
+  resize: vertical;
+}
+
+@media (max-width: 700px) {
+  .locus-item-sheet .locus-item-header {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===================================== */
+/* INFLECTION LIST                       */
+/* ===================================== */
+
+.locus-infliction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.locus-infliction-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.35);
+}
+
+.locus-infliction-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.locus-infliction-meta {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.locus-infliction-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.locus-infliction-controls button {
+  cursor: pointer;
+}
+/* ===================================== */
+/* MONSTER DEATH'S DOOR TRACKER          */
+/* ===================================== */
+
+.locus-monster-death-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.locus-monster-death-header .death-reset {
+  padding: 4px 8px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.locus-death-tracker {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 6px;
+  margin: 10px 0 12px;
+}
+
+.locus-death-tracker .death-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(205, 162, 117, 0.28);
+  background: rgba(16, 16, 20, 0.85);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+}
+
+.locus-death-tracker .death-box:hover:not(.is-disabled) {
+  transform: translateY(-1px);
+  border-color: rgba(205, 162, 117, 0.5);
+}
+
+.locus-death-tracker .death-box.is-filled {
+  background: linear-gradient(180deg, rgba(128, 24, 24, 0.95), rgba(64, 10, 10, 0.98));
+  border-color: rgba(205, 162, 117, 0.5);
+  box-shadow:
+    inset 0 0 10px rgba(255,255,255,0.05),
+    0 0 8px rgba(128, 24, 24, 0.18);
+}
+
+.locus-death-tracker .death-box.is-disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+
+.locus-empty {
+  opacity: 0.7;
+  font-style: italic;
+}
+.locus-monster-stat-action {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.locus-monster-stat-action button {
+  min-width: 32px;
+  cursor: pointer;
+}
+.locus-infliction-controls .infliction-use {
+  min-width: 48px;
+}
+.locus-infliction-roll {
+  margin-top: 8px;
+  min-width: 140px;
+  cursor: pointer;
+}
+
+/* ===================================== */
+/* CHAT - BROAD OVERRIDE                 */
+/* Replace both old chat sections        */
+/* ===================================== */
+
+.chat-message,
+li.chat-message,
+#chat .chat-message,
+#chat-log .chat-message {
+  position: relative !important;
+  margin: 0 0 6px !important;
+  padding: 8px 10px !important;
+  border: 1px solid rgba(205, 162, 117, 0.25) !important;
+  border-left: 3px solid rgba(128, 24, 24, 0.95) !important;
+  border-radius: 10px !important;
+  background:
+    radial-gradient(circle at top, rgba(130, 20, 20, 0.10), transparent 34%),
+    linear-gradient(180deg, rgba(26, 26, 30, 0.96), rgba(16, 16, 20, 0.96)) !important;
+  color: #e7dfd4 !important;
+  box-shadow:
+    inset 0 0 18px rgba(0, 0, 0, 0.45),
+    0 10px 24px rgba(0, 0, 0, 0.35) !important;
+}
+
+.chat-message::before,
+li.chat-message::before,
+#chat .chat-message::before,
+#chat-log .chat-message::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  border-radius: inherit !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+    inset 0 0 12px rgba(255, 255, 255, 0.02) !important;
+}
+
+.chat-message .message-header,
+li.chat-message .message-header,
+#chat .chat-message .message-header,
+#chat-log .chat-message .message-header {
+  margin-bottom: 6px !important;
+  padding-bottom: 4px !important;
+  border-bottom: 1px solid rgba(205, 162, 117, 0.16) !important;
+  background: transparent !important;
+}
+
+.chat-message .message-sender,
+li.chat-message .message-sender,
+#chat .chat-message .message-sender,
+#chat-log .chat-message .message-sender {
+  color: #f4ede4 !important;
+  font-family: "Cinzel", serif !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+}
+
+.chat-message .message-metadata,
+li.chat-message .message-metadata,
+#chat .chat-message .message-metadata,
+#chat-log .chat-message .message-metadata {
+  color: #aa9d8f !important;
+  font-size: 11px !important;
+}
+
+.chat-message .flavor-text,
+li.chat-message .flavor-text,
+#chat .chat-message .flavor-text,
+#chat-log .chat-message .flavor-text {
+  color: #cda275 !important;
+}
+
+/* this is the likely visible parchment area */
+.chat-message .message-content,
+li.chat-message .message-content,
+#chat .chat-message .message-content,
+#chat-log .chat-message .message-content {
+  background: transparent !important;
+  background-image: none !important;
+  color: #e7dfd4 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.chat-message .message-content p,
+.chat-message .message-content li,
+li.chat-message .message-content p,
+li.chat-message .message-content li {
+  color: #e7dfd4 !important;
+}
+
+.chat-message strong,
+li.chat-message strong {
+  color: #f4ede4 !important;
+}
+
+/* buttons in your custom roll cards */
+.chat-message button,
+li.chat-message button {
+  background: linear-gradient(180deg, #c96565, #b64d4d) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  color: #fff7f2 !important;
+}
+
+/* Foundry/internal roll boxes */
+.chat-message .dice-roll,
+.chat-message .dice-result,
+.chat-message .dice-tooltip,
+.chat-message .dice-formula,
+.chat-message .dice-total,
+li.chat-message .dice-roll,
+li.chat-message .dice-result,
+li.chat-message .dice-tooltip,
+li.chat-message .dice-formula,
+li.chat-message .dice-total {
+  background: rgba(18, 18, 22, 0.92) !important;
+  background-image: none !important;
+  color: #e6e1d7 !important;
+  border-color: rgba(205, 162, 117, 0.22) !important;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.35) !important;
+}
+
+.chat-message .dice-formula,
+li.chat-message .dice-formula {
+  border: 1px solid rgba(205, 162, 117, 0.18) !important;
+  border-radius: 6px !important;
+}
+
+.chat-message .dice-total,
+li.chat-message .dice-total {
+  border: 1px solid rgba(128, 24, 24, 0.45) !important;
+  border-radius: 6px !important;
+  color: #f4ede4 !important;
+}
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skill-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+}
+
+.skill-main {
+  flex: 1;
+}
+
+.skill-name {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.skill-meta {
+  display: flex;
+  gap: 8px;
+  font-size: 0.9em;
+  opacity: 0.85;
+  margin-bottom: 4px;
+}
+
+.skill-summary {
+  font-size: 0.95em;
+  opacity: 0.95;
+}
+
+.skills-empty {
+  padding: 12px;
+  opacity: 0.7;
+  font-style: italic;
+}
+.locus-skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 6px;
+}
+
+.locus-skill-name {
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.locus-skill-meta {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.locus-skill-reminder {
+  margin-top: 6px;
+  font-size: 0.95em;
+}
+/* =========================
+   HEADER HAND DISPLAY
+========================= */
+
+.locus-header-hand-block {
+  margin-top: 8px;
+}
+
+.locus-header-hand {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+/* =========================
+   CARD BASE
+========================= */
+
+.locus-header-card {
+  width: 52px;
+  height: 72px;
+  border-radius: 6px;
+
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(145deg, #0e0e12, #1a1a22);
+  border: 1px solid rgba(180, 160, 120, 0.25);
+
+  box-shadow:
+    inset 0 0 8px rgba(0,0,0,0.8),
+    0 0 6px rgba(0,0,0,0.6);
+
+  font-family: var(--locus-font-ui, serif);
+}
+
+/* subtle eerie hover */
+.locus-header-card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 8px rgba(120, 0, 0, 0.4),
+    inset 0 0 10px rgba(0,0,0,0.9);
+}
+
+/* =========================
+   CORNER (VALUE + SUIT)
+========================= */
+
+.locus-header-card__corner {
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  gap: 1px;
+
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.locus-header-card__rank {
+  font-size: 18px;
+  font-weight: 700;
+  color: #f2efe6;
+
+  text-shadow:
+    0 0 4px rgba(0,0,0,0.8),
+    0 0 2px rgba(0,0,0,0.6);
+}
+
+.locus-header-card__suit {
+  font-size: 60px;
+
+  text-shadow:
+    0 0 3px rgba(0,0,0,0.7);
+}
+
+/* =========================
+   CENTER LABEL (RARE / HAUNT)
+========================= */
+
+.locus-header-card__body {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  right: 6px;
+
+  text-align: center;
+}
+
+.locus-header-card__label {
+  font-size: 9px;
+  letter-spacing: 0.05em;
+  color: #cfc7b0;
+}
+
+/* =========================
+   HAUNT VARIANT
+========================= */
+
+.locus-header-card.is-haunt {
+  background: linear-gradient(145deg, #1a0d0d, #2a0f0f);
+  border: 1px solid rgba(180, 40, 40, 0.4);
+
+  box-shadow:
+    0 0 10px rgba(120, 0, 0, 0.5),
+    inset 0 0 12px rgba(0,0,0,0.9);
+}
+
+.locus-header-card.is-haunt .locus-header-card__label {
+  color: #ff6b6b;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* =========================
+   SUIT COLORS
+========================= */
+
+.locus-header-card__suit {
+  font-size: 26px;
+}
+
+/* subtle, not casino-bright */
+.locus-header-card[data-suit="spades"] .locus-header-card__suit,
+.locus-header-card[data-suit="clubs"] .locus-header-card__suit {
+  color: #cfcfcf;
+}
+
+.locus-header-card[data-suit="hearts"] .locus-header-card__suit,
+.locus-header-card[data-suit="diamonds"] .locus-header-card__suit {
+  color: #a84a4a;
+>>>>>>> 60a8c33e340506e04a93be96f090995ec22a958d
 }

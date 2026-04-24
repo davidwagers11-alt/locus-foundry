@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <form class="{{cssClass}} locus-cast-sheet locus-item-sheet" autocomplete="off">
   <div class="locus-sheet__background"></div>
 
@@ -103,4 +104,111 @@
       </div>
     </div>
   </section>
+=======
+<form class="{{cssClass}} locus-cast-sheet locus-item-sheet" autocomplete="off">
+  <div class="locus-sheet__background"></div>
+
+  <header class="locus-cast-header locus-item-header">
+    <div class="locus-cast-header__portrait-wrap">
+      <img
+        class="locus-cast-header__portrait"
+        src="{{item.img}}"
+        data-edit="img"
+        title="{{item.name}}"
+      />
+    </div>
+
+    <div class="locus-cast-header__identity">
+      <div class="locus-cast-header__title-wrap">
+        <span class="locus-ui-label">Item Name</span>
+        <h1 class="locus-cast-header__title">
+          <input
+            type="text"
+            name="name"
+            value="{{item.name}}"
+            placeholder="Item Name"
+          />
+        </h1>
+      </div>
+
+      <div class="locus-cast-header__subtitle-row">
+        <div class="locus-type-pill">
+          <span>Item</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="locus-panel">
+    <div class="locus-panel__header">
+      <h2>Details</h2>
+    </div>
+    <div class="locus-panel__body">
+      <div class="locus-form-grid locus-form-grid--2">
+        <div class="locus-field">
+          <label>Size</label>
+          <input
+            type="number"
+            name="system.size"
+            value="{{system.size}}"
+            min="1"
+          />
+        </div>
+
+        <div class="locus-field">
+          <label>Damage Type</label>
+          <input
+            type="text"
+            name="system.damageType"
+            value="{{system.damageType}}"
+            placeholder="blunt, sharp, fire..."
+          />
+        </div>
+
+        <div class="locus-field">
+          <label>Quality</label>
+          <select name="system.quality">
+            <option value="easy" {{#if (eq system.quality "easy")}}selected{{/if}}>Easy</option>
+            <option value="medium" {{#if (eq system.quality "medium")}}selected{{/if}}>Medium</option>
+            <option value="hard" {{#if (eq system.quality "hard")}}selected{{/if}}>Hard</option>
+          </select>
+        </div>
+
+        <div class="locus-field">
+          <label>Durability</label>
+          <div class="locus-split-input">
+            <input
+              type="number"
+              name="system.durability.value"
+              value="{{system.durability.value}}"
+              min="0"
+            />
+            <span>/</span>
+            <input
+              type="number"
+              name="system.durability.max"
+              value="{{system.durability.max}}"
+              min="1"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="locus-panel locus-subpanel">
+    <div class="locus-panel__header">
+      <h2>Description</h2>
+    </div>
+    <div class="locus-panel__body">
+      <div class="locus-field">
+        <textarea
+          name="system.description"
+          rows="10"
+          placeholder="Item notes, rules text, or description..."
+        >{{system.description}}</textarea>
+      </div>
+    </div>
+  </section>
+>>>>>>> 60a8c33e340506e04a93be96f090995ec22a958d
 </form>
