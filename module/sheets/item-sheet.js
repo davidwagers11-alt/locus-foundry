@@ -17,6 +17,7 @@ export class LocusItemSheet extends ItemSheet {
     const context = super.getData(options);
     context.system = this.item.system;
     context.isGenericItem = this.item.type === "item";
+    context.isSkill = this.item.type === "skill";
     return context;
   }
 }

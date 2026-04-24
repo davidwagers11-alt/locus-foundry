@@ -379,7 +379,7 @@ Hooks.once("init", function () {
   Items.unregisterSheet("core", ItemSheet);
 
   Items.registerSheet("locus-system", LocusItemSheet, {
-    types: ["item"],
+    types: ["item", "skill"],
     makeDefault: true
   });
 

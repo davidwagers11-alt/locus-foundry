@@ -26,7 +26,7 @@
 
       <div class="locus-cast-header__subtitle-row">
         <div class="locus-type-pill">
-          <span>Item</span>
+          <span>{{#if isSkill}}Skill{{else}}Item{{/if}}</span>
         </div>
       </div>
     </div>
@@ -37,6 +37,43 @@
       <h2>Details</h2>
     </div>
     <div class="locus-panel__body">
+      {{#if isSkill}}
+      <div class="locus-form-grid locus-form-grid--2">
+        <div class="locus-field">
+          <label>Skill Type</label>
+          <select name="system.skillType">
+            <option value="trained" {{#if (eq system.skillType "trained")}}selected{{/if}}>Trained</option>
+            <option value="knowledge" {{#if (eq system.skillType "knowledge")}}selected{{/if}}>Knowledge</option>
+            <option value="expertise" {{#if (eq system.skillType "expertise")}}selected{{/if}}>Expertise</option>
+            <option value="specialty" {{#if (eq system.skillType "specialty")}}selected{{/if}}>Specialty</option>
+          </select>
+        </div>
+
+        <div class="locus-field">
+          <label>Linked Attribute</label>
+          <select name="system.linkedAttribute">
+            <option value="" {{#if (eq system.linkedAttribute "")}}selected{{/if}}>None</option>
+            <option value="frailty" {{#if (eq system.linkedAttribute "frailty")}}selected{{/if}}>Frailty</option>
+            <option value="clumsiness" {{#if (eq system.linkedAttribute "clumsiness")}}selected{{/if}}>Clumsiness</option>
+            <option value="carelessness" {{#if (eq system.linkedAttribute "carelessness")}}selected{{/if}}>Carelessness</option>
+            <option value="impatience" {{#if (eq system.linkedAttribute "impatience")}}selected{{/if}}>Impatience</option>
+            <option value="cowardice" {{#if (eq system.linkedAttribute "cowardice")}}selected{{/if}}>Cowardice</option>
+            <option value="ignorance" {{#if (eq system.linkedAttribute "ignorance")}}selected{{/if}}>Ignorance</option>
+            <option value="repulsion" {{#if (eq system.linkedAttribute "repulsion")}}selected{{/if}}>Repulsion</option>
+            <option value="temper" {{#if (eq system.linkedAttribute "temper")}}selected{{/if}}>Temper</option>
+          </select>
+        </div>
+
+        <div class="locus-field locus-field--full">
+          <label>Reminder Text</label>
+          <textarea
+            name="system.reminderText"
+            rows="4"
+            placeholder="What should players remember when using this skill?"
+          >{{system.reminderText}}</textarea>
+        </div>
+      </div>
+      {{else}}
       <div class="locus-form-grid locus-form-grid--2">
         <div class="locus-field">
           <label>Size</label>
@@ -86,6 +123,7 @@
           </div>
         </div>
       </div>
+      {{/if}}
     </div>
   </section>
 
