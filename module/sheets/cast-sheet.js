@@ -11,8 +11,8 @@ export class LocusCastSheet extends ActorSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["locus-system", "sheet", "actor", "cast"],
       template: "systems/locus-system/templates/actor/cast-sheet.html",
-      width: 900,
-      height: 900,
+      width: 840,
+      height: 820,
       tabs: [
         {
           navSelector: ".tabs",

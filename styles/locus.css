@@ -135,7 +135,7 @@
   width: 100%;
   max-width: 100%;
   min-width: 0;
-  padding: 14px;
+  padding: 12px;
   overflow: visible;
 }
 
@@ -143,9 +143,9 @@
 
 .locus-cast-header {
   display: grid;
-  grid-template-columns: 180px minmax(0, 1.2fr) minmax(0, 1fr);
-  gap: 14px;
-  padding: 14px;
+  grid-template-columns: 160px minmax(0, 1.15fr) minmax(280px, 0.95fr);
+  gap: 12px;
+  padding: 12px;
   align-items: stretch;
 }
 
@@ -160,8 +160,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6px;
-  min-height: 180px;
+  padding: 5px;
+  min-height: 160px;
   border-radius: 10px;
   background: rgba(255,255,255,0.02);
   border: 1px solid rgba(174, 146, 115, 0.12);
@@ -170,7 +170,7 @@
 .locus-cast-header__portrait {
   width: 100%;
   max-width: 100%;
-  height: 180px;
+  height: 160px;
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid rgba(174, 146, 115, 0.25);
@@ -180,7 +180,7 @@
 .locus-cast-header__identity {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .locus-cast-header__title-wrap {
@@ -202,11 +202,11 @@
 }
 
 .locus-cast-header__title input {
-  height: 46px;
-  font-size: 30px;
+  height: 42px;
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.03em;
-  padding: 6px 2px;
+  padding: 4px 2px;
   border: none;
   border-bottom: 1px solid rgba(174, 146, 115, 0.34);
   border-radius: 0;
@@ -222,7 +222,7 @@
 
 .locus-cast-header__subtitle-row {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
@@ -232,8 +232,8 @@
   align-items: center;
   gap: 8px;
   width: auto;
-  min-height: 38px;
-  padding: 8px 12px;
+  min-height: 34px;
+  padding: 6px 10px;
 }
 
 .locus-type-pill {
@@ -258,11 +258,11 @@
 .locus-cast-header__pressure {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
+  gap: 8px;
 }
 
 .locus-pressure-card {
-  padding: 12px;
+  padding: 10px;
 }
 
 .locus-pressure-card--stress {
@@ -298,7 +298,7 @@
 .locus-tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
   width: 100%;
   padding: 0;
 }
@@ -307,8 +307,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 110px;
-  padding: 10px 14px;
+  min-width: 100px;
+  padding: 9px 12px;
   border-radius: 10px;
   border: 1px solid rgba(174, 146, 115, 0.18);
   background: linear-gradient(180deg, rgba(28, 28, 34, 0.96), rgba(18, 18, 22, 0.96));
@@ -1172,11 +1172,11 @@
 }
 .locus-attribute-row {
   display: grid;
-  grid-template-columns: minmax(180px, 1fr) minmax(180px, 220px) 80px;
-  gap: 14px;
+  grid-template-columns: minmax(140px, 1fr) minmax(150px, 190px) 72px;
+  gap: 10px;
   align-items: center;
   width: 100%;
-  padding: 10px 12px;
+  padding: 9px 10px;
   border-radius: 10px;
   background: rgba(255,255,255,0.025);
   border: 1px solid rgba(255,255,255,0.04);
@@ -1198,15 +1198,15 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   width: 100%;
 }
 
 .locus-attribute-dot {
-  width: 18px;
-  height: 18px;
-  min-width: 18px;
-  min-height: 18px;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
   padding: 0;
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,0.28);
@@ -1249,22 +1249,25 @@
 .locus-death-track-wrap {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-bottom: 12px;
+  gap: 6px;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 .locus-death-track {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
   gap: 6px;
-  justify-content: flex-start;
+  justify-content: stretch;
   align-items: center;
+  width: 100%;
 }
 
 .locus-death-box {
-  width: 18px;
-  height: 18px;
-  min-width: 18px;
-  min-height: 18px;
+  width: 100%;
+  height: 16px;
+  min-width: 0;
+  min-height: 16px;
   padding: 0;
   border-radius: 3px;
   border: 1px solid rgba(229,192,123,0.35);
@@ -1301,7 +1304,7 @@
 }
 
 .locus-death-reset {
-  height: 32px;
+  height: 30px;
   padding: 0 10px;
   border-radius: 6px;
   border: 1px solid rgba(229,192,123,0.35);
