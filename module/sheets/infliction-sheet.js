@@ -30,3 +30,4 @@ export class LocusInflictionSheet extends ItemSheet {
     ];
     return context;
   }
+}
