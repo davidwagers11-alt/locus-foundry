@@ -19,3 +19,4 @@ export class LocusItemSheet extends ItemSheet {
     context.isGenericItem = this.item.type === "item";
     return context;
   }
+}

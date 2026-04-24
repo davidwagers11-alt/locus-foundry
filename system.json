@@ -2,7 +2,7 @@
   "id": "locus-system",
   "title": "Locus System",
   "description": "A custom system for running Locus-based horror games in Foundry VTT.",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "compatibility": {
     "minimum": "13",
     "verified": "13.351"
